@@ -10,11 +10,11 @@ LunchController.$inject= ["$scope"];
 function LunchController($scope){
 $scope.list="";
 $scope.Number_Of_Items=0;
-$scope.message="";
+$scope.message="a";
 
 $scope.Calculate= function (){
-  $scope.Number_Of_Items=CalculateList($scope.list);
-  $scope.message=ProduceMessage($scope.Number_Of_Items);
+$scope.Number_Of_Items=CalculateList($scope.list);
+$scope.message=ProduceMessage($scope.Number_Of_Items);
 }
 
 function CalculateList(list){
@@ -30,12 +30,12 @@ return number_items ;
 
 function ProduceMessage(n){
 if(n>3)
-$scope.message="Too much!";
-else if(0<n<4)
-$scope.message="Enjoy!";
-else {
-$scope.message="Please enter data first";
-}
+return "Too much!";
+else if(0<n)
+return "Enjoy!";
+else
+return "Please enter data first";
+
 }
 };
 

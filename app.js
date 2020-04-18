@@ -10,7 +10,7 @@ LunchController.$inject= ["$scope"];
 function LunchController($scope){
 $scope.list="";
 $scope.Number_Of_Items=0;
-$scope.message="a";
+$scope.message="";
 
 $scope.Calculate= function (){
 $scope.Number_Of_Items=CalculateList($scope.list);
